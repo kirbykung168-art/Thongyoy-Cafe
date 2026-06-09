@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js')</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#3a1c2a">
@@ -617,8 +618,10 @@ footer .credit{opacity:.55;max-width:48ch;line-height:1.7}
 .lightbox .close{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);padding:.6rem .9rem;border:1px solid var(--soft);border-radius:999px}
 
 /* reveal */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--easing),transform .9s var(--easing)}
-.reveal.in{opacity:1;transform:none}
+.reveal{transition:opacity .9s var(--easing),transform .9s var(--easing)}
+html.js .reveal{opacity:0;transform:translateY(28px)}
+html.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){html.js .reveal{opacity:1;transform:none}}
 .reveal.d2{transition-delay:.1s}
 .reveal.d3{transition-delay:.2s}
 .reveal.d4{transition-delay:.3s}
@@ -1140,7 +1143,6 @@ footer .credit{opacity:.55;max-width:48ch;line-height:1.7}
             <a class="primary" href="https://www.google.com/maps/dir/?api=1&destination=Thongyoy+Cafe+Central+Ladprao" target="_blank" rel="noopener">Get directions ↗</a>
             <a href="https://www.facebook.com/thongyoycafe/" target="_blank" rel="noopener">Hours on FB ↗</a>
           </div>
-        </div>
       </article>
 
     </div>
@@ -1155,50 +1157,50 @@ footer .credit{opacity:.55;max-width:48ch;line-height:1.7}
         <span style="font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--wine)">№ 06 · The room</span>
         <h2 style="margin-top:1rem;">A room <em>worth photographing.</em></h2>
       </div>
-      <p>Rose-gold exterior, mini-palm interior, gold platters between you and the cake. Click to enlarge.</p>
+      <p>Rose-gold exterior, mini-palm interior, gold platters between you and the cake. Tap to enlarge.</p>
     </div>
 
     <div class="gbento">
 
       <!-- SRC: hivelife — feature -->
-      <button class="gcell g-1 lb" data-src="/images/optimized/hl-feature-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/hl-feature-800.webp 800w, /images/optimized/hl-feature-1200.webp 1200w"><img src="/images/optimized/hl-feature-800.webp" alt="Hive Life feature cover image of Thongyoy Cafe" width="1200" height="500" loading="lazy"></picture>
+      <button class="gcell g-1 lb" data-src="/images/optimized/hl-feature-1600.webp" aria-label="View feature image">
+        <picture><source type="image/webp" srcset="/images/optimized/hl-feature-480.webp 480w, /images/optimized/hl-feature-800.webp 800w, /images/optimized/hl-feature-1200.webp 1200w" sizes="(max-width:980px) 100vw, 50vw"><img src="/images/optimized/hl-feature-800.webp" alt="Hive Life feature cover image of Thongyoy Cafe" width="1200" height="500" loading="lazy" decoding="async"></picture>
         <span class="tag">Hive Life · '18</span>
       </button>
 
       <!-- SRC: tsl interior -->
-      <button class="gcell g-2 lb" data-src="/images/optimized/interior-marble-wood-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/interior-marble-wood-800.webp 800w, /images/optimized/interior-marble-wood-1200.webp 1200w"><img src="/images/optimized/interior-marble-wood-800.webp" alt="Marble + wood interior" width="1200" height="800" loading="lazy"></picture>
+      <button class="gcell g-2 lb" data-src="/images/optimized/interior-marble-wood-1600.webp" aria-label="View marble interior">
+        <picture><source type="image/webp" srcset="/images/optimized/interior-marble-wood-480.webp 480w, /images/optimized/interior-marble-wood-800.webp 800w, /images/optimized/interior-marble-wood-1200.webp 1200w" sizes="(max-width:980px) 100vw, 50vw"><img src="/images/optimized/interior-marble-wood-800.webp" alt="Marble + wood interior" width="1200" height="800" loading="lazy" decoding="async"></picture>
         <span class="tag">Mini palms</span>
       </button>
 
       <!-- SRC: hl interior fashion -->
-      <button class="gcell g-3 lb" data-src="/images/optimized/hl-interior-fashion-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/hl-interior-fashion-800.webp 800w, /images/optimized/hl-interior-fashion-1200.webp 1200w"><img src="/images/optimized/hl-interior-fashion-800.webp" alt="Floral interior with fashion prints" width="800" height="533" loading="lazy"></picture>
+      <button class="gcell g-3 lb" data-src="/images/optimized/hl-interior-fashion-1600.webp" aria-label="View floral interior">
+        <picture><source type="image/webp" srcset="/images/optimized/hl-interior-fashion-480.webp 480w, /images/optimized/hl-interior-fashion-800.webp 800w, /images/optimized/hl-interior-fashion-1200.webp 1200w" sizes="(max-width:980px) 50vw, 33vw"><img src="/images/optimized/hl-interior-fashion-800.webp" alt="Floral interior with fashion prints" width="800" height="533" loading="lazy" decoding="async"></picture>
         <span class="tag">Floral motifs</span>
       </button>
 
       <!-- SRC: hl cake detail -->
-      <button class="gcell g-4 lb" data-src="/images/optimized/hl-cake-detail-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/hl-cake-detail-800.webp 800w"><img src="/images/optimized/hl-cake-detail-800.webp" alt="Cake detail" width="800" height="533" loading="lazy"></picture>
+      <button class="gcell g-4 lb" data-src="/images/optimized/hl-cake-detail-1600.webp" aria-label="View cake detail">
+        <picture><source type="image/webp" srcset="/images/optimized/hl-cake-detail-480.webp 480w, /images/optimized/hl-cake-detail-800.webp 800w, /images/optimized/hl-cake-detail-1200.webp 1200w" sizes="(max-width:980px) 50vw, 25vw"><img src="/images/optimized/hl-cake-detail-800.webp" alt="Cake detail" width="800" height="533" loading="lazy" decoding="async"></picture>
         <span class="tag">Cake</span>
       </button>
 
       <!-- SRC: tsl cakes png -->
-      <button class="gcell g-5 lb" data-src="/images/optimized/cakes-fusion-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/cakes-fusion-800.webp 800w, /images/optimized/cakes-fusion-1200.webp 1200w"><img src="/images/optimized/cakes-fusion-800.webp" alt="Fusion cake on a gold platter" width="960" height="868" loading="lazy"></picture>
+      <button class="gcell g-5 lb" data-src="/images/optimized/cakes-fusion-1600.webp" aria-label="View fusion cake">
+        <picture><source type="image/webp" srcset="/images/optimized/cakes-fusion-480.webp 480w, /images/optimized/cakes-fusion-800.webp 800w, /images/optimized/cakes-fusion-1200.webp 1200w" sizes="(max-width:980px) 50vw, 33vw"><img src="/images/optimized/cakes-fusion-800.webp" alt="Fusion cake on a gold platter" width="960" height="868" loading="lazy" decoding="async"></picture>
         <span class="tag">Fusion cake</span>
       </button>
 
       <!-- SRC: hl founder room -->
-      <button class="gcell g-6 lb" data-src="/images/optimized/hl-founder-room-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/hl-founder-room-800.webp 800w, /images/optimized/hl-founder-room-1200.webp 1200w"><img src="/images/optimized/hl-founder-room-800.webp" alt="Founder's room" width="800" height="533" loading="lazy"></picture>
-        <span class="tag">The founder's room</span>
+      <button class="gcell g-6 lb" data-src="/images/optimized/hl-founder-room-1600.webp" aria-label="View founder's room">
+        <picture><source type="image/webp" srcset="/images/optimized/hl-founder-room-480.webp 480w, /images/optimized/hl-founder-room-800.webp 800w, /images/optimized/hl-founder-room-1200.webp 1200w" sizes="(max-width:980px) 50vw, 33vw"><img src="/images/optimized/hl-founder-room-800.webp" alt="Founder's room with floral prints" width="800" height="533" loading="lazy" decoding="async"></picture>
+        <span class="tag">Founder's room</span>
       </button>
 
       <!-- SRC: tsl hero -->
-      <button class="gcell g-7 lb" data-src="/images/optimized/hero-flower-cafe-1600.webp" aria-label="View">
-        <picture><source type="image/webp" srcset="/images/optimized/hero-flower-cafe-800.webp 800w, /images/optimized/hero-flower-cafe-1200.webp 1200w"><img src="/images/optimized/hero-flower-cafe-800.webp" alt="TheSmartLocal feature hero" width="1500" height="785" loading="lazy"></picture>
+      <button class="gcell g-7 lb" data-src="/images/optimized/hero-flower-cafe-1600.webp" aria-label="View hero floral interior">
+        <picture><source type="image/webp" srcset="/images/optimized/hero-flower-cafe-480.webp 480w, /images/optimized/hero-flower-cafe-800.webp 800w, /images/optimized/hero-flower-cafe-1200.webp 1200w" sizes="(max-width:980px) 50vw, 33vw"><img src="/images/optimized/hero-flower-cafe-800.webp" alt="TheSmartLocal feature hero" width="1500" height="785" loading="lazy" decoding="async"></picture>
         <span class="tag">TSL feature · '20</span>
       </button>
 
@@ -1283,21 +1285,13 @@ footer .credit{opacity:.55;max-width:48ch;line-height:1.7}
           </table>
         </div>
         <div class="block">
-          <div class="label">Phone · Line</div>
-          <div class="value"><a href="tel:+66987484661">+66 98 748 4661</a><br><em>@thongyoycafe</em> · prefers Line</div>
+          <div class="label">Phone</div>
+          <div class="value"><a href="tel:+66987484661">+66 98 748 4661</a></div>
         </div>
         <div class="block">
-          <div class="label">Order channels</div>
-          <div class="value">
-            <em>Line Man</em> · search "Thongyoy cafe"<br>
-            <em>Grab</em> · search "ทองย้อยคาเฟ่"
-          </div>
-        </div>
-        <div class="block" style="grid-column:1/-1">
           <div class="label">Social</div>
           <div class="value">
-            <a href="https://www.instagram.com/thongyoy_cafe/" target="_blank" rel="noopener">@thongyoy_cafe</a>
-            &nbsp;·&nbsp;
+            <a href="https://www.instagram.com/thongyoy_cafe/" target="_blank" rel="noopener">@thongyoy_cafe</a><br>
             <a href="https://www.facebook.com/thongyoycafe/" target="_blank" rel="noopener">/thongyoycafe</a>
           </div>
         </div>
@@ -1335,20 +1329,22 @@ footer .credit{opacity:.55;max-width:48ch;line-height:1.7}
 (() => {
   const $$=(s,p=document)=>Array.from(p.querySelectorAll(s));
   const $=(s,p=document)=>p.querySelector(s);
+  // Defensive: never let .reveal stay invisible — JS will toggle .in; failsafe timer below.
   const heroPhoto=$('#heroPhoto');
   if(heroPhoto)requestAnimationFrame(()=>requestAnimationFrame(()=>heroPhoto.classList.add('loaded')));
   const nav=$('#nav');
-  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>24);
-  document.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  if(nav){const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>24);document.addEventListener('scroll',onScroll,{passive:true});onScroll();}
   const navMobile=$('#navMobile');
-  $('#navToggle').addEventListener('click',()=>{navMobile.classList.add('show');navMobile.setAttribute('aria-hidden','false');});
-  $('#navClose').addEventListener('click',()=>{navMobile.classList.remove('show');navMobile.setAttribute('aria-hidden','true');});
-  $$('#navMobile a').forEach(a=>a.addEventListener('click',()=>navMobile.classList.remove('show')));
+  const navToggle=$('#navToggle');
+  const navClose=$('#navClose');
+  if(navMobile&&navToggle)navToggle.addEventListener('click',()=>{navMobile.classList.add('show');navMobile.setAttribute('aria-hidden','false');});
+  if(navMobile&&navClose)navClose.addEventListener('click',()=>{navMobile.classList.remove('show');navMobile.setAttribute('aria-hidden','true');});
+  $$('#navMobile a').forEach(a=>a.addEventListener('click',()=>navMobile&&navMobile.classList.remove('show')));
 
   function status(){
     const d=new Date(); const day=d.getDay(); const m=d.getHours()*60+d.getMinutes();
     const fmt=x=>`${Math.floor(x/60)}:${String(x%60).padStart(2,'0')}`;
-    const r=[10*60,19*60]; /* IG bio Jun 2026: daily 10:00–19:00 at Ari */
+    const r=[10*60,19*60];
     const open=m>=r[0]&&m<r[1];
     const dn=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][day];
     return {label:open?`Open now · until ${fmt(r[1])}`:(m<r[0]?`Opens ${fmt(r[0])} today`:`Closed · opens ${fmt(r[0])} tomorrow`),today:`${dn} · ${fmt(r[0])} — ${fmt(r[1])}`};
@@ -1361,17 +1357,23 @@ footer .credit{opacity:.55;max-width:48ch;line-height:1.7}
     const row=tbl.querySelectorAll('tr')[rowIdx];
     if(row){row.style.background='rgba(240,215,122,.08)';row.style.color='var(--gold-leaf)';}}
 
+  const reveals=$$('.reveal');
   if('IntersectionObserver' in window){
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'-10% 0px -8% 0px',threshold:0.04});
-    $$('.reveal').forEach(el=>io.observe(el));
-  } else { $$('.reveal').forEach(el=>el.classList.add('in')); }
+    reveals.forEach(el=>io.observe(el));
+  } else { reveals.forEach(el=>el.classList.add('in')); }
+  // Failsafe: after 1.2s, force-reveal anything still hidden (covers reduced-motion + parent-opacity cases).
+  setTimeout(()=>reveals.forEach(el=>el.classList.add('in')),1200);
 
   const lb=$('#lightbox'); const lbImg=$('#lbImg');
-  const closeLb=()=>lb.classList.remove('show');
-  $$('.lb').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();lbImg.src=b.dataset.src;lb.classList.add('show');}));
-  lb.addEventListener('click',closeLb);
-  $('#lbClose').addEventListener('click',e=>{e.stopPropagation();closeLb();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+  if(lb&&lbImg){
+    const closeLb=()=>lb.classList.remove('show');
+    $$('.lb').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();lbImg.src=b.dataset.src;lb.classList.add('show');}));
+    lb.addEventListener('click',closeLb);
+    const lbClose=$('#lbClose');
+    if(lbClose)lbClose.addEventListener('click',e=>{e.stopPropagation();closeLb();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+  }
 })();
 </script>
 </body>
